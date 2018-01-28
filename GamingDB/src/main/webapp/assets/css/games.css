@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+body {
+	background-image: url("assets/jpg/mario.jpg");
+}
+
+.container {
+	max-width: 85%;
+	margin: auto;
+}
+
+h6 {
+	font-family: cursive;
+	font-size: xx-large;
+	font-weight: bold;
+	color: black;
+}
+
+.searchBox {
+	right: 5px;
+	width: 200px;
+	margin-bottom: 3px;
+}
+
+.table-hover th{  
+	font-size: x-large;
+	font-weight: bold;
+	text-align: center;
+}
+
+.table-hover td{
+	font-weight: bold;
+	text-align: center;
+}
+
+.panel {
+	border-radius: 15px;
+}
+
+.panel-heading {
+	border-radius: 15px;
+}
+.btn {
+	font-weight: bold;
+	color: black;
+	border-radius: 15px;
+}
+
+.form-control {
+	width: 98%;
+	border-radius: 15px;
+	margin-top: 5px;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+#tableWithBg {
+	max-height: 430px !important;
+	overflow-y: scroll;
+	background-repeat: repeat;
+	background-image: url("assets/jpg/bricks.jpg");	
+}
+
+

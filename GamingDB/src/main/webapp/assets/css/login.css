@@ -1,0 +1,30 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background-image: url("assets/jpg/mario.jpg");
+}
+
+.loginForm {
+	position: absolute;
+	top: 20px;
+	left: 30px;
+}
+
+.create_account {
+	text-align: center;
+	margin-top: 35px;
+	margin-right: 40%;
+}
+
+.btn { 
+	margin-top: 10px;
+	border-radius: 15px;
+	font-weight: bold;
+	color: black;
+}
+
+.form-control {
+	border-radius: 15px;
+}
+
+

@@ -16,17 +16,24 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.gamingdb.model.Game;
 import com.gamingdb.service.GamesService;
+import com.gamingdb.service.RatingService;
 
 @Controller("gamesController")
 public class GamesController {
 	
 	@Autowired
 	private GamesService gamesService;
+	
+	@Autowired 
+	private RatingService ratingService;
 
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String getIndex (@ModelAttribute ("game") Game game, Model model) { 
 		System.out.println("games controller!");
 		List<Game> games = gamesService.fetchAll();
+		for (Game g : games) {
+			g.setAverageRating(ratingService.calcAverageRating(g.getId()));
+		}
 		model.addAttribute("games", games);
 		return "index";
 	}
@@ -47,9 +54,11 @@ public class GamesController {
 	
 	@RequestMapping(value="/deleteGame", method=RequestMethod.GET)
 	public String getDeleteGame (ModelMap model) {
-		System.out.println("deleteGames called");
+		System.out.println("getDeleteGames called");
 		List<Game> myGames = gamesService.fetchById();
-		//myGames.get(1).getId();
+		for (Game g : myGames) {
+			g.setAverageRating(ratingService.calcAverageRating(g.getId()));
+		}
 		model.addAttribute("games", myGames);
 		return "deleteGame";
 	}
@@ -57,8 +66,8 @@ public class GamesController {
 	@RequestMapping(value="/deleteGame", method=RequestMethod.POST)
 	public String postDeleteGame (ModelMap model,
 			@RequestParam(value="delete") Long deleteGameId) {
-		System.out.println("deleteGame called");
-		System.out.println("pobrane id: " + deleteGameId);
+		System.out.println("postDeleteGame called");
+		System.out.println("	id: " + deleteGameId);
 		
 		gamesService.deleteGameById(deleteGameId);
 		return "redirect:/deleteGame.html";

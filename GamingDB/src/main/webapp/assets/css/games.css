@@ -40,6 +40,7 @@ h6 {
 .panel-heading {
 	border-radius: 15px;
 }
+
 .btn {
 	font-weight: bold;
 	color: black;
@@ -60,5 +61,6 @@ h6 {
 	background-repeat: repeat;
 	background-image: url("assets/jpg/bricks.jpg");	
 }
+
 
 

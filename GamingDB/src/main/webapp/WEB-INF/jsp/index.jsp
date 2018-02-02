@@ -31,7 +31,7 @@
 									<th class="col-md-2">TYPE</th>
 									<th class="col-md-2">MODE</th>
 									<th class="col-md-2">PRODUCER</th>
-									<th class="col-md-3">OPINION</th>
+									<th class="col-md-3">RATING</th>
 									<th class="col-md-1">ADDED</th>
 								</tr>
 							</thead>
@@ -42,7 +42,7 @@
 										<td>${game.type}</td>	
 										<td>${game.mode}</td>
 										<td>${game.producent}</td>
-										<td>${game.opinion}</td>
+										<td>${game.averageRating}</td>
 										<td>${game.user.username}</td>
 									</tr>
 								</c:forEach>							
@@ -52,8 +52,8 @@
 										<td><form:input path="type" class="form-control" maxlength="22" placeholder="Type"/></td>
 										<td><form:input path="mode" class="form-control" maxlength="22" placeholder="Mode"/></td>
 										<td><form:input path="producent" class="form-control" maxlength="22" placeholder="Producent"/></td>
-										<td><form:input path="opinion" class="form-control" maxlength="27" placeholder="Opinion"/></td>
-										<td><button type="submit" class="btn btn-success">Add Game</button>
+										<td></td>
+										<td><button type="submit" class="btn btn-success">Add Game</button></td>
 									</tr>	
 								</form:form>										
 							</tbody>

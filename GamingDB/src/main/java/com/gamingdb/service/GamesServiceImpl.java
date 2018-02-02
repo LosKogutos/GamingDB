@@ -62,9 +62,6 @@ public class GamesServiceImpl implements GamesService {
 
 	@Transactional
 	public void deleteGameById(Long deleteGameId) {
-		gamesRepository.deleteById(deleteGameId);
-		
+		gamesRepository.deleteById(deleteGameId);	
 	}
-
-
 }

@@ -31,7 +31,7 @@
 									<th class="col-md-2">TYPE</th>
 									<th class="col-md-2">MODE</th>
 									<th class="col-md-2">PRODUCER</th>
-									<th class="col-md-3">OPINION</th>
+									<th class="col-md-3">RATING</th>
 									<th class="col-md-1">DELETE</th>
 								</tr>
 							</thead>
@@ -43,7 +43,7 @@
 										<td>${game.type}</td>	
 										<td>${game.mode}</td>
 										<td>${game.producent}</td>
-										<td>${game.opinion}</td>
+										<td>${game.averageRating}</td>
 										<td>
 										<form:form>										
 											<button id="delete" action="submit" name="delete" value="${games[loop.index].id}" class="btn btn-danger">

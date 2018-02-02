@@ -8,14 +8,14 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>GamingDB.com</title>
 		<style>
-			<%@ include file="/assets/css/bootstrap.min.css"%>
-			<%@ include file="/assets/css/games.css"%>			
-			<%@ include file="/assets/x-editable/bootstrap3-editable/css/bootstrap-editable.css"%>"
+			<%@ include file="/assets/css/bootstrap.min.css"%>						
+			<%@ include file="/assets/css/games.css"%>	
+			<link href="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" />" rel="stylesheet">			
 		</style>
 		<script src="<c:url value="/assets/js/jquery-3.3.1.js"/>"></script>
-		<script src="<c:url value="/assets/js/bootstrap.min.js"/>"></script>
+		<script src="<c:url value="/assets/js/bootstrap.min.js"/>"></script>		
 		<script src="<c:url value="/assets/js/searchBar.js"/>"></script>
-		<script src="<c:url value="/assets/x-editable/bootstrap3-editable/js/bootstrap-editable.js"/>"></script>
+		<script src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"/>"></script>
 		<script src="<c:url value="/assets/js/main.js"/>"></script>
 	</head>
 	<body>

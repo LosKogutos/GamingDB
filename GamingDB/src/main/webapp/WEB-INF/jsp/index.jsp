@@ -9,10 +9,14 @@
 		<title>GamingDB.com</title>
 		<style>
 			<%@ include file="/assets/css/bootstrap.min.css"%>
-			<%@ include file="/assets/css/games.css"%>
+			<%@ include file="/assets/css/games.css"%>			
+			<%@ include file="/assets/x-editable/bootstrap3-editable/css/bootstrap-editable.css"%>"
 		</style>
 		<script src="<c:url value="/assets/js/jquery-3.3.1.js"/>"></script>
+		<script src="<c:url value="/assets/js/bootstrap.min.js"/>"></script>
 		<script src="<c:url value="/assets/js/searchBar.js"/>"></script>
+		<script src="<c:url value="/assets/x-editable/bootstrap3-editable/js/bootstrap-editable.js"/>"></script>
+		<script src="<c:url value="/assets/js/main.js"/>"></script>
 	</head>
 	<body>
 		<div class="container">			
@@ -36,13 +40,16 @@
 								</tr>
 							</thead>
 							<tbody id="tableBody">
-								<c:forEach items="${games}" var="game">
+								<c:forEach items="${games}" var="game" varStatus="loop">
 									<tr>
 										<td>${game.title}</td>
 										<td>${game.type}</td>	
 										<td>${game.mode}</td>
 										<td>${game.producent}</td>
-										<td>${game.averageRating}</td>
+										<td>
+											${game.averageRating}  
+											<a href="#" id="${games[loop.index].id}" data-pk="${games[loop.index].id}" data-url="/gamingdb/postRating/${games[loop.index].id}" class="addYours">Add yours</a>
+										</td>
 										<td>${game.user.username}</td>
 									</tr>
 								</c:forEach>							

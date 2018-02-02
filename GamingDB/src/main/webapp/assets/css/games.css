@@ -47,6 +47,14 @@ h6 {
 	border-radius: 15px;
 }
 
+.btn btn-primary btn-sm editable-submit {
+	color: green !important;
+}
+
+.btn btn-default btn-sm editable-cancel {
+	color: red !important;
+}
+
 .form-control {
 	width: 98%;
 	border-radius: 15px;

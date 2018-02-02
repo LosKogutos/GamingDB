@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -50,6 +51,16 @@ public class GamesController {
 			gamesService.addGame(game);
 			return "redirect:/";
 		}
+	}
+	
+	@RequestMapping(value="/postRating/{gameId}", method=RequestMethod.POST)
+	public String postRating (@PathVariable("gameId") Long id, @RequestParam("value") String value) {
+		System.out.println("postRating called");
+		System.out.println("rating value: " + value);
+		System.out.println("game id: " + id);
+		ratingService.addRating(id, value);
+		
+		return "redirect:/";
 	}
 	
 	@RequestMapping(value="/deleteGame", method=RequestMethod.GET)

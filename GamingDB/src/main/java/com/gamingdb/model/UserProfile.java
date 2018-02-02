@@ -34,6 +34,9 @@ public class UserProfile  {
 	
 	@OneToMany(mappedBy = "user", cascade=CascadeType.ALL)
 	private List<Authority> authorities;
+	
+	@OneToMany(mappedBy= "user", cascade=CascadeType.REMOVE)
+	private List<Rating> ratings;
 
 	public List<Authority> getAuthorities() {
 		return authorities;
@@ -97,6 +100,14 @@ public class UserProfile  {
 
 	public void setGames(List<Game> games) {
 		this.games = games;
+	}
+
+	public List<Rating> getRatings() {
+		return ratings;
+	}
+
+	public void setRatings(List<Rating> ratings) {
+		this.ratings = ratings;
 	}
 
 

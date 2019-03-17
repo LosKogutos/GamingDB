@@ -1,4 +1,4 @@
-# GamingDB v.1.0
+# GamingDB
 Website with community's rating and opinion about multiple individual games.
 
 It is a java web application with CRUD operations on MySQL database. 
